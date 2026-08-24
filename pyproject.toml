@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-core"
+version = "0.1.0"
+description = "Generic deterministic agentic orchestration foundation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Boop"}
+]
+dependencies = [
+  "mcp==2.0.0",
+  "opentelemetry-api>=1.30,<2",
+  "opentelemetry-sdk>=1.30,<2",
+  "pydantic>=2.10,<3"
+]
+
+[project.scripts]
+agentic-core = "agentic_core.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,29 @@
+{
+  "service": {
+    "name": "agentic-core",
+    "environment": "development"
+  },
+  "persistence": {
+    "adapter": "memory",
+    "checkpoint_url": ""
+  },
+  "memory": {
+    "session_window_messages": 12,
+    "long_term_adapter": "disabled",
+    "vector_endpoint": ""
+  },
+  "execution": {
+    "tool_executor": "local",
+    "isolation_adapter": "local-contract",
+    "worker_queue": "disabled"
+  },
+  "telemetry": {
+    "enabled": true,
+    "otlp_endpoint": ""
+  },
+  "security": {
+    "input_guardrail": "baseline",
+    "output_redactor": "baseline",
+    "approval_required_operations": ["write", "execute", "network", "financial"]
+  }
+}
